@@ -1,0 +1,90 @@
+<div class="container">
+  <header>
+    <div class="title">Conditions</div>
+    <div class="required">* is required</div>
+  </header>
+  <form class="form-controler" [formGroup]="form">
+    <div>
+      <select
+        class="form-select"
+        (change)="(changeFirstSelector)"
+        formControlName="fromWhere"
+      >
+        <option value="" disabled selected hidden>Portal *</option>
+        <option *ngFor="let item of firstSelector" [ngValue]="item">
+          {{ item }}
+        </option></select
+      ><span class="tooltipStyle" [tooltip]="'Lorem ipsum'">i</span>
+    </div>
+    <div>
+      <select
+        class="form-select"
+        (change)="(changeSecondSelector)"
+        formControlName="type"
+      >
+        <option value="" disabled selected hidden>Type *</option>
+        <option *ngFor="let item of secondSelector" [ngValue]="item">
+          {{ item }}
+        </option></select
+      ><span class="tooltipStyle" [tooltip]="'Lorem ipsum'">i</span>
+    </div>
+
+    <div class="marginTop marginBottom borderBottom paddingBottom flex">
+      <span class="subtitle">Benefit amaount</span>
+      <span class="tooltipStyle" [tooltip]="'Lorem ipsum'">i</span>
+    </div>
+
+    <div class="datePicker">
+      <mat-form-field appearance="fill">
+        <mat-label>Start date</mat-label>
+        <input matInput [matDatepicker]="picker1" formControlName="startDate" />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="picker1"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Finish date</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker2"
+          formControlName="finishDate"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="picker2"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="form-radio">
+      <div *ngFor="let item of radioSelector">
+        <label>
+          <input
+            type="radio"
+            [value]="item.id"
+            [checked]="item.checked"
+            formArrayName="inputRadio"
+            (change)="onRadioChange($event)"
+          />{{ item.name }}</label
+        >
+      </div>
+      <span class="tooltipStyle" [tooltip]="'Lorem ipsum'">i</span>
+    </div>
+    <div class="form-checkbox">
+      <div class="flex justify-space-b" *ngFor="let item of checkboxSelector">
+        <label>
+          <input
+            type="checkbox"
+            formArrayName="checkboxDate"
+            [value]="item.id"
+            [checked]="item.checked"
+            (change)="onCheckboxChange($event)"
+          />{{ item.name }}</label
+        >
+        <span class="tooltipStyle" [tooltip]="'Lorem ipsum'">i</span>
+      </div>
+    </div>
+  </form>
+</div>

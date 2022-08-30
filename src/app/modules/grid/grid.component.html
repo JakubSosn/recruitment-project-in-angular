@@ -1,0 +1,27 @@
+<div class="gridWrapper marginTopM marginLeft" [formGroup]="formDescription">
+  <div class="grid1 borderBottomS padding">Nazwa promocji</div>
+  <div class="grid2 borderBottomS borderLeftS padding">Edytuj</div>
+  <div class="grid3 borderBottomS borderLeftS padding">Usuń</div>
+  <div class="grid4 padding" formControlName="marketingName" ngDefaultControl>
+    {{ formDescription.controls.marketingName.value }}
+  </div>
+  <div class="grid5 borderLeftS padding">
+    <button class="btn-icon" (click)="editForm()">
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Edit"
+        fontIcon="edit"
+        (click)="(editForm)"
+      ></mat-icon>
+    </button>
+  </div>
+  <div class="grid6 borderLeftS padding">
+    <button class="btn-icon" (click)="deleteForm()">
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Delete"
+        fontIcon="delete"
+      ></mat-icon>
+    </button>
+  </div>
+</div>

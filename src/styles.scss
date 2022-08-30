@@ -1,0 +1,203 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$rectuitment-project-primary: mat.define-palette(mat.$indigo-palette);
+$rectuitment-project-accent: mat.define-palette(
+  mat.$pink-palette,
+  A200,
+  A100,
+  A400
+);
+
+// The warn palette is optional (defaults to red).
+$rectuitment-project-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$rectuitment-project-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $rectuitment-project-primary,
+      accent: $rectuitment-project-accent,
+      warn: $rectuitment-project-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($rectuitment-project-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@100;300;400;700&display=swap");
+
+$background-color: #f1f1f1;
+$primary-font: "Roboto", sans-serif;
+$secondary-font: "Roboto Mono", monospace;
+
+.marginTopM {
+  margin-top: 15px;
+}
+.marginTopXL {
+  margin-top: 40px;
+}
+.marginBottom {
+  margin-bottom: 10px;
+}
+.marginLeftM {
+  margin-left: 15px;
+}
+.marginLeft {
+  margin-left: 40px;
+}
+.marginLeft42 {
+  margin-left: 42px;
+}
+.padding {
+  padding: 5px;
+}
+.paddingBottom {
+  padding-bottom: 15px;
+}
+.btn {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.borderLeftS {
+  border-left: 1px solid black;
+}
+.borderBottomS {
+  border-bottom: 1px solid black;
+}
+.borderBottom {
+  border-bottom: 2px solid white;
+}
+.flex {
+  display: flex;
+}
+.justify-space-b {
+  justify-content: space-between;
+}
+.btn-icon {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+}
+html,
+body {
+  height: 100vh;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $primary-font, sans-serif;
+}
+.container {
+  width: 550px;
+  min-height: 95vh;
+  margin-top: 15px;
+  padding: 0 35px;
+  background-color: $background-color;
+  border-right: 2px solid white;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 2px solid white;
+}
+
+.title {
+  font-size: 18px;
+}
+.required {
+  color: red;
+}
+// .disable {
+//   pointer-events: none;
+// }
+.tooltipStyle {
+  display: inline-flex;
+  background: rgb(139, 27, 27);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-family: $secondary-font;
+}
+.tooltipStyleTop {
+  transform: translateY(-150px);
+}
+
+.form-controler {
+  display: flex;
+  flex-direction: column;
+}
+.form-input {
+  box-sizing: border-box;
+  width: 97%;
+  height: 35px;
+  padding: 5px 15px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.form-textarea {
+  width: 91%;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  padding: 15px;
+  border: 0;
+  border-radius: 5px;
+  font-family: $primary-font;
+  font-size: 14px;
+}
+.form-select {
+  width: 97%;
+  background-color: white;
+  box-sizing: border-box;
+  height: 35px;
+  padding: 5px 15px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border: 0;
+  border-radius: 5px;
+  font-family: $primary-font;
+  font-size: 14px;
+}
+span.subtitle {
+  color: gray;
+  width: 97%;
+}
+
+.form-radio {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 50px;
+}
+.form-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

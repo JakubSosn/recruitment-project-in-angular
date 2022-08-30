@@ -1,0 +1,70 @@
+<div class="container">
+  <header>
+    <div class="title">Desciption</div>
+    <div class="required">* is required</div>
+  </header>
+  <form class="form-controler" [formGroup]="form">
+    <div>
+      <input
+        class="form-input"
+        type="text"
+        id="marketingName"
+        name="marketingName"
+        formControlName="marketingName"
+        placeholder="Marketing name *"
+        [required]="true"
+        (change)="reload()"
+      /><span class="tooltipStyle" [tooltip]="'Lorem ipsum'">i</span>
+    </div>
+    <div>
+      <input
+        class="form-input"
+        type="text"
+        name="technicalName"
+        formControlName="technicalName"
+        placeholder="Technical name"
+      />
+      <span class="tooltipStyle" [tooltip]="'Lorem ipsum'">i</span>
+    </div>
+    <div>
+      <textarea
+        class="form-textarea"
+        rows="5"
+        placeholder="Description"
+        formControlName="textArea"
+      ></textarea
+      ><span class="tooltipStyle tooltipStyleTop" [tooltip]="'Lorem ipsum'"
+        >i</span
+      >
+    </div>
+  </form>
+  <!-- <p>{{ marketingName.value }}</p> -->
+  <section>
+    <h2>Catalog promotion toturial:</h2>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, placeat
+      iste nesciunt dolorem vero veritatis hic aperiam architecto nisi optio
+      quis omnis in cupiditate nam assumenda minima fugit quos rerum!
+      Voluptatem, architecto sed. Voluptatum iure nesciunt perspiciatis ad
+      architecto? Consequatur saepe iure fugit qui natus illo eaque, eius nemo
+      voluptates, quae quia pariatur quisquam inventore esse exercitationem quis
+      alias? Debitis?
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, placeat
+      iste nesciunt dolorem vero veritatis hic aperiam architecto nisi optio
+      quis omnis in cupiditate nam assumenda minima fugit quos rerum!
+      Voluptatem, architecto sed. Voluptatum iure nesciunt perspiciatis ad
+      architecto? Consequatur saepe iure fugit qui natus illo eaque, eius nemo
+      voluptates, quae quia pariatur quisquam inventore esse exercitationem quis
+      alias? Debitis?
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, placeat
+      iste nesciunt dolorem vero veritatis hic aperiam architecto nisi optio
+      quis omnis in cupiditate nam assumenda minima fugit quos rerum!
+      Voluptatem, architecto sed. Voluptatum iure nesciunt perspiciatis ad
+      architecto?
+    </p>
+  </section>
+</div>

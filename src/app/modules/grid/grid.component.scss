@@ -1,0 +1,11 @@
+.gridWrapper {
+  min-width: 500px;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "grid1 grid2 grid3"
+    "grid4 grid5 grid6";
+  border: 1px solid black;
+  text-align: center;
+  justify-content: center;
+}

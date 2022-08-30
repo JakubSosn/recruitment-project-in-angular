@@ -1,0 +1,37 @@
+.sideNavContainer {
+  min-width: 250px;
+  padding: 15px 0px 0 25px;
+  font-size: 16px;
+
+  .row-item {
+    display: flex;
+    align-items: center;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    background-color: #f1f1f1;
+
+    .number {
+      background: rgb(139, 27, 27);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      transform: translate(-15px);
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: black;
+      margin-left: 5px;
+    }
+
+    &:hover {
+      font-size: 17px;
+      border-right: 2px #f1f1f1;
+      background-color: #d9d6d6;
+    }
+  }
+}
