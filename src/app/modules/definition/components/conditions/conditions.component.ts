@@ -24,7 +24,7 @@ export class ConditionsComponent implements OnInit {
     {
       id: 2,
       name: 'Base price 100%',
-      checked: true,
+      checked: false,
     },
   ];
   checkboxSelector = [
